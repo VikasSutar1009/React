@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-table-section {
+            margin: 40px auto;
+            max-width: 800px;
+            /* Max width for the table */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: black;
+            background-color: #ccc;
+
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            text-align: left;
+
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            font-weight: bold;
+            color: #333;
+        }
+
+        tbody tr td:nth-child(3) {
+            /* General style for the 'In Stock' column */
+            font-weight: bold;
+        }
+
+        tbody tr td:nth-child(3):contains('No') {
+            /* This pseudo-class is not standard, use with caution or use a class */
+            color: #dc3545;
+        }
+
+        tbody tr td:nth-child(3):not(:contains('No')) {
+            color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="product-table-section">
+        <h2>Our Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>In Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laptop Pro</td>
+                    <td>$1200.00</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Wireless Mouse</td>
+                    <td>$25.50</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Mechanical Keyboard</td>
+                    <td>$75.00</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>HD Webcam</td>
+                    <td>$50.00</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
