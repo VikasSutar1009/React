@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized Product Table</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navbar styling (same as Task 1 & 4) */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Product table styling - ENHANCED */
+        .product-table-section {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+
+        .product-table-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        /* Caption Styling */
+        caption {
+            caption-side: top;
+            /* Position caption at the top */
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #eee;
+            /* Lighter border for cleaner look */
+        }
+
+        thead {
+            background-color: #f8f9fa;
+            /* Lighter header background */
+        }
+
+        th {
+            font-weight: bold;
+            color: #444;
+            border-bottom: 2px solid #dee2e6;
+            /* Stronger border for header bottom */
+        }
+
+        /* Zebra-striping for table rows */
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Light grey for even rows */
+        }
+
+        /* Hover effect for table rows */
+        tbody tr:hover {
+            background-color: #e9ecef;
+            /* Slightly darker grey on hover */
+            cursor: pointer;
+            /* Indicate clickable/hoverable */
+        }
+
+        /* Styling for 'In Stock' status using classes added in HTML */
+        .in-stock-yes {
+            color: #28a745;
+            /* Green for "Yes" */
+            font-weight: bold;
+        }
+
+        .in-stock-no {
+            color: #dc3545;
+            /* Red for "No" */
+            font-weight: bold;
+        }
+
+        /* Basic responsiveness: Stack cells on very small screens if needed */
+        /* For this task, we'll assume width adjustments and potentially horizontal scroll is enough */
+        @media (max-width: 600px) {
+
+            th,
+            td {
+                padding: 10px 8px;
+                /* Reduce padding on smaller screens */
+                font-size: 0.9em;
+            }
+
+            caption {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="product-table-section">
+            <h2>Our Products</h2>
+            <table>
+                <caption>Product Catalog - Latest Inventory</caption> {/* Added caption */}
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>In Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop Pro</td>
+                        <td>$1200.00</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Wireless Mouse</td>
+                        <td>$25.50</td>
+                        <td class="in-stock-yes">Yes</td> {/* Added class for styling */}
+                    </tr>
+                    <tr>
+                        <td>Mechanical Keyboard</td>
+                        <td>$75.00</td>
+                        <td class="in-stock-no">No</td> {/* Added class for styling */}
+                    </tr>
+                    <tr>
+                        <td>HD Webcam</td>
+                        <td>$50.00</td>
+                        <td class="in-stock-yes">Yes</td> {/* Added class for styling */}
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+
+</html>
